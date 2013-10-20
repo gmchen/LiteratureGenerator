@@ -1,6 +1,6 @@
 import re
 
-f = open("Bible_KJV.txt", 'r')
+f = open("gutenberg_bible.txt", 'r')
 
 text = f.read()
 pars = text.split("\r\n\r\n")

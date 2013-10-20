@@ -1,6 +1,6 @@
 import re
 
-f = open("shakespeare.txt", 'r')
+f = open("gutenberg_shakespeare.txt", 'r')
 
 lines = []
 
