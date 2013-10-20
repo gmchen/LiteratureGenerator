@@ -1,3 +1,5 @@
+# Load text, prompt for first word, and generate text using a unigram (one word)-based Markov chain
+
 import random
 from sys import stdout
 
@@ -11,15 +13,15 @@ for line in f:
 		words.append(w)
 stdout.write("Done.\n")
 
-prev_word = ""
 current_word = raw_input("Enter a starting word: ")
 r = random.SystemRandom()
+
 while True:
 	if exit == "quit" or exit == "q":
 		break
 	indices = []
 	for i in range(len(words)):
-		if (words[i] == current_word and i == 0) or (words[i] == current_word and words[i-1] == prev_word):
+		if words[i] == current_word:
 			indices.append(i)
 	next_index = 0
 	if len(indices) == 0:
@@ -32,11 +34,9 @@ while True:
 	if len(indices) == 1:
 		pass
 		#stdout.write("+")
-	prev_word = current_word
 	current_word = words[next_index+1]
-	#stdout.write(" " + str(len(indices)) + " options; chose ")	
 	stdout.write(current_word + " ")
-	#stdout.write(current_word + "\n")
 	stdout.flush()
 	# wait until Enter is pressed
-	#raw_input()
+	# raw_input()
+	
