@@ -1,3 +1,5 @@
+# A script to parse the Project Gutenberg Compete Works of William Shakespeare, remove Gutenberg text, stage directions, etc, and generate a file consisting of space separated words (generates cleaned_shakespeare.txt)
+
 import re
 
 f = open("gutenberg_shakespeare.txt", 'r')

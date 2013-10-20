@@ -1,3 +1,5 @@
+# A script to parse the Project Gutenberg King James Bible and remove Gutenberg text and numbers. Generate a file consisting of space separated words (generates cleaned_bible.txt)
+
 import re
 
 f = open("gutenberg_bible.txt", 'r')
