@@ -28,7 +28,7 @@ while True:
 	next_index = 0
 	if len(indices) == 0:
 		next_index = r.randint(0, len(words)-1)
-		stdout.write("_")
+		#stdout.write("_")
 	else:
 		next_index = indices[r.randint(0, len(indices)-1)]
 	if next_index == len(words)-1:
