@@ -3,7 +3,7 @@
 # Note: this should eventually prompt for two words
 
 import random
-from sys import stdout
+from sys import stdout, exit
 
 # grab the word data from cleaned_shakespeare.txt
 f = open("text_sources/cleaned_shakespeare.txt", "r")
@@ -15,8 +15,12 @@ for line in f:
 		words.append(w)
 stdout.write("Done.\n")
 
-prev_word = ""
-current_word = raw_input("Enter a starting word: ")
+
+in_text = raw_input("Enter your starting words, separated by space: ")
+if len(in_text.split()) < 2:
+	exit("There entered text is invalid. Exiting...")
+prev_word = in_text.split()[0]
+current_word = in_text.split()[1]
 r = random.SystemRandom()
 while True:
 	if exit == "quit" or exit == "q":
