@@ -1,7 +1,5 @@
 # Load text, prompt for first word, and generate text using a digram (two word)-based Markov chain
 
-# Note: this should eventually prompt for two words
-
 import random
 from sys import stdout, exit
 
